@@ -95,6 +95,13 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* Material css overrides */
+.card{
+    opacity: 0.9;
+    -moz-opacity: 0.9;
+    color: #000;
+}
+
 /*
 TODO: Text size using vw?
 */
@@ -124,7 +131,6 @@ h1{ /* TODO: responsive */
 }
 
 p{
-    font-size: 24px;
     text-align: justify;
 }
 
@@ -374,9 +380,7 @@ section.site .ripples{
 .water-floor-items{
     position: absolute;
     bottom: 30px;
-    /*left: 50%;
-    margin-left: -120px;*/
-    right: 350px;
+    left: 32vw;
     width: 457px;
     height: 242px;
     background: url("../img/water-bottom-items.png") repeat-x;
@@ -421,52 +425,94 @@ section.projects{
     background: -o-linear-gradient(top, #1148a2, #bbdefb);
 }
 
-section.projects .container{
-    padding-top: 210px;
-}
-
-.projects-scenery{
-    margin-top: -335px;
-}
-
-.vine-top{
-    /*position: absolute;
-    top: 170px;*/
-    /*margin-top: 170px;*/
-    background: url("../img/vine-top.png") no-repeat;
-    background-position: 35vw 0;/* TODO: responsive */
-    /*background-size: 50vw;*/
-    /*background-size: contain;*/
-    width: 100%;
-    height: 636px;
-    /*min-height: 430px;*/
-    max-height: 512px;
-}
-
-.vine-repeat{
-    /*position: absolute;
-    top: 682px;
-    left: 32vw;*/
-    /*margin-top: 199px;
-    margin-left: 196px;*/
-    background: url("../img/vine-repeat.png") repeat-y;
-    background-position: 35vw 0;
-    width: 100%;
-    height: 2200px;
-}
-
 section.projects h1+hr+p{
     padding-left: 130px;
 }
 
-.projects-listing{
-    position: absolute;
-    min-height: 500px;
+section.projects .container{
+    padding-top: 210px;
 }
 
+.vine-top{ /* TODO: responsive */
+    background: url("../img/vine-top.png") 35vw 0 no-repeat;
+}
+
+.vine-repeat{ /* TODO: responsive */
+    background: url("../img/vine-repeat.png") 35vw 0 repeat-y;
+}
+
+.vine-base{ /* TODO: responsive */ /* TODO: adjust bottom to avoid cutoff flower as needed */
+    width: 100%;
+    height: 510px;
+    margin-top: -55px;
+    background: url("../img/vine-base.png") 35vw 0 no-repeat;
+}
+
+.vine-landscape{ /* TODO: responsive */
+    position: relative;
+    z-index: 2;
+    margin-top: -200px; /** TODO: Lower this for smaller browser widths */
+    width: 100%;
+    height: 629px;
+    background: url("../img/vine-landscape.png") no-repeat;
+    background-size: cover;
+}
+
+.vine-landscape-gradient{
+    position: absolute;
+    z-index: 1;
+    bottom: 300px;
+    height: 40rem;
+    width: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,000000+100&0+25,1+100 */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(191,191,191,0) 25%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(191,191,191,0) 25%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(191,191,191,0) 25%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+.projects-listing{
+    margin-top: 0;
+    height: 3000px;
+}
+
+.projects-listing .gocoop .z-depth-1{
+    color: #000;
+    background-color: #fff;
+    padding: 0.82rem 0.75rem;
+    border: 1px solid #a2c0d9;
+}
+
+.projects-listing .z-depth-1 p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.projects-listing .card{
+    margin-top: 10rem;
+}
+
+.projects-listing .gocoop{ /* TODO: responsive */
+    /*width: 521px;*/
+    /*height: 286px;*/
+    position: relative;
+    height: 23vw;
+    max-height: 286px;
+    min-height: 150px;
+    background: transparent url("../img/projects-gocoop.png") 30vw no-repeat;
+    background-size: contain;
+}
+
+.projects-listing .gocoop p{
+    position: absolute;
+    top: 24%;
+    width: 27vw;
+    opacity: 0.9;
+    -moz-opacity: 0.9;
+    font-size: 1.8vw;
+}
 
 section.game{
-    min-height: 300px;
     background: #000;
     color: #fdd835;
 }
