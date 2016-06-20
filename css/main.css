@@ -124,19 +124,18 @@ h5, h6{
     font-weight: 600;
 }
 
-h1{ /* TODO: responsive */
-
-    font-size: 4.6rem;
-    line-height: 4rem;
+h1{
+    font-size: 3rem;
+    line-height: 3rem;
 }
 
 p{
     text-align: justify;
 }
 
-h1 .lg{ /* TODO: responsive */
-    font-size: 12rem;
-    line-height: 8.6rem;
+h1 .lg{
+    font-size: 8rem;
+    line-height: 6.2rem;
     float: left;
 }
 
@@ -161,15 +160,22 @@ section.about .bar > .container > .row{
     margin-bottom: 5px;
 }
 
+.my-info{
+    margin-top: -19px;
+}
+
 .about-scenery{
-    position: relative;
+    position: absolute;
+    top: 170px;
     z-index: 5;
+    width: 100%;
+    height: 100%;
 }
 
 .about-vertical-line1{
     position: absolute;
-    top: -38px;
-    left: 15px;
+    top: 172px;
+
     width: 27px;
     height: 100px;
     z-index: 1;
@@ -177,16 +183,19 @@ section.about .bar > .container > .row{
     background-color: #000;
 }
 
-.about-vertical-line2{
+.about-vertical-line{
     position: absolute;
     /*top: -38px;
     left: 15px;
     width: 27px;
     height: 719px;*/
+
+    top: 4px;
+
     width: 27px;
     height: 100%;
-    left: 15px;
-    bottom: -87px;
+
+
     z-index: 1;
     display: block;
     background-color: #000;
@@ -204,27 +213,27 @@ section.about .bar > .container > .row{
     background-size: contain;
 }
 
-.cloud1{ /* TODO: responsive */
-    width: 323px;
-    height: 190px;
-    top: -132px;
-    right: -100px;
+.cloud1{
+    width: 38vw;
+    height: 29.4vw;
+    top: -35vw;
+    right: 2vw;
 }
 
-.cloud2{ /* TODO: responsive */
-    width: 485px;
-    height: 268px;
-    top: -20px;
-    left: 27%;
+.cloud2{
+    width: 33vw;
+    height: 24.8vw;
+    top: -3vw;
+    left: 2vw;
     z-index: 7;
 }
 
-.cloud3{ /* TODO: responsive */
-    width: 168px;
-    height: 93px;
-    top: -70px;
-    left: -5%;
-    z-index: 6;
+.cloud3{
+    width: 26vw;
+    height: 18.8vw;
+    top: -20vw;
+    left: 0vw;
+    z-index: 1;
 }
 
 .plant-white{
@@ -238,56 +247,58 @@ section.about .bar > .container > .row{
 }
 
 .plant-white1{
-    width: 101px;
-    height: 232px;
-    bottom: -140px;
-    right: -80px;
+    width: 7vw;
+    height: 12vw;
+    bottom: 115px;
+    left: 8vw;
+
 }
 
 .plant-white2{
-    width: 30px;
-    height: 161px;
-    bottom: -160px;
-    left: -80px;
+    width: 8vw;
+    height: 13vw;
+    bottom: 100px;
+    left: 25vw;
 }
 
 .plant-white3{
-    width: 50px;
-    height: 181px;
-    bottom: -150px;
-    left: 150px;
+    width: 10vw;
+    height: 14vw;
+    bottom: 90px;
+    left: 31vw;
 }
 
 .plant-white4{
-    width: 35px;
-    height: 166px;
-    bottom: -150px;
-    left: 120px;
+    width: 8vw;
+    height: 14vw;
+    bottom: 110px;
+    right: 22vw;
 }
 
 .plant-white5{
-    width: 50px;
-    height: 181px;
-    bottom: -160px;
-    right: 0px;
+    width: 14vw;
+    height: 24vw;
+    bottom: 80px;
+    right: 12vw;
 }
 
 .plant-white6{
-    width: 50px;
-    height: 181px;
-    bottom: -140px;
-    right: -90px;
+    width: 7vw;
+    height: 12vw;
+    bottom: 120px;
+    right: 11vw;
 }
 
-.me-pic{ /* TODO: responsive */
+.me-pic{
     position: absolute;
-    top: -90px;
-    left: -110px;
+    top: -15vw;
+    left: 4vw;
     z-index: 2;
     background-image: url("../img/me.png");
     background-repeat: no-repeat;
-    width: 469px;
-    height: 284px;
+    width: 40vw;
+    height: 24.2vw;
+    background-size: contain;
 }
 
 .about-text{
@@ -298,7 +309,7 @@ section.about .bar > .container > .row{
 .contact-box{
     position: relative;
     z-index: 30;
-    margin-top: 220px;
+    /*margin-top: 20vw;*/
     background-color: #fff;
     border: 1px solid #a2c0d9;
 }
@@ -606,13 +617,159 @@ section.game h1+hr{
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
+   Media Queries for Responsive Design.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+/* === MAX WIDTHS ========================================*/
+
+@media only screen and (max-width: 600px){
+    h1{
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    h1 .lg{
+        font-size: 10rem;
+        line-height: 7.2rem;
+    }
+
+    h6{
+        font-size: .7rem;
+    }
+}
+
+@media only screen and (max-width: 360px){
+
+}
+
+@media only screen and (max-width: 320px){
+
+    h5{
+        font-size: 1.3rem;
+    }
+
+    h6{
+        font-size: .6rem;
+    }
+}
+
+/* === MIN WIDTHS ========================================*/
+
+
+@media only screen and (min-width: 361px){
+    .cloud2{
+        width: 48vw;
+        height: 39.8vw;
+    }
+
+    .cloud3{
+        top: -12vw;
+    }
+}
+
+@media only screen and (min-width: 601px){
+
+    h1{
+        font-size: 4.6rem;
+        line-height: 4rem;
+    }
+
+    h1 .lg{
+        font-size: 12rem;
+        line-height: 8.6rem;
+        float: left;
+    }
+
+    h5{
+        font-size: 1.5rem;
+    }
+
+    .me-pic{
+        top: -3vw;
+        left: 2vw;
+    }
+
+    .contact-box{
+        margin-top: 20vw;
+    }
+
+    .cloud1{
+        top: -23vw;
+    }
+
+    .cloud2{
+        width: 33vw;
+        height: 24.8vw;
+        top: 5vw;
+        left: 25vw;
+    }
+
+    .cloud3{
+        top: -5vw;
+    }
+
+    .plant-white1{
+        width: 3vw;
+        height: 6vw;
+        bottom: 115px;
+        left: 8vw;
+    }
+
+    .plant-white2{
+        width: 5vw;
+        height: 8vw;
+        bottom: 100px;
+        left: 25vw;
+    }
+
+    .plant-white3{
+        width: 5vw;
+        height: 8vw;
+        bottom: 90px;
+        left: 29vw;
+    }
+
+    .plant-white4{
+        width: 6vw;
+        height: 12vw;
+        bottom: 60px;
+        right: 20vw;
+    }
+
+    .plant-white5{
+        width: 10vw;
+        height: 20vw;
+        bottom: 30px;
+        right: 12vw;
+    }
+
+    .plant-white6{
+        width: 5vw;
+        height: 10vw;
+        bottom: 80px;
+        right: 11vw;
+    }
+}
+
+@media only screen and (min-width: 993px){
+
+
+    .my-info{
+        margin-top: -40px;
+    }
+
+    .cloud1{
+        top: -15vw;
+    }
+
+    .cloud3{
+        top: -2vw;
+    }
+
+}
+
+@media only screen and (min-width: 1200px){
+
 }
 
 @media print,
