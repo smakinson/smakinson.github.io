@@ -96,9 +96,9 @@ textarea {
    ========================================================================== */
 
 /* Material css overrides */
-.card{
+.card, .card-panel{
     opacity: 0.9;
-    -moz-opacity: 0.9;
+    -moz-opacity: 0.85;
     color: #000;
 }
 
@@ -156,6 +156,10 @@ section.about .bar{
     border-bottom: 1px solid #a2c0d9;
 }
 
+section.about h1+.divider{
+    background-color: #000;
+}
+
 section.about .bar > .container > .row{
     margin-bottom: 5px;
 }
@@ -194,8 +198,6 @@ section.about .bar > .container > .row{
 
     width: 27px;
     height: 100%;
-
-
     z-index: 1;
     display: block;
     background-color: #000;
@@ -251,7 +253,6 @@ section.about .bar > .container > .row{
     height: 12vw;
     bottom: 115px;
     left: 8vw;
-
 }
 
 .plant-white2{
@@ -278,7 +279,7 @@ section.about .bar > .container > .row{
 .plant-white5{
     width: 14vw;
     height: 24vw;
-    bottom: 80px;
+    bottom: 88px;
     right: 12vw;
 }
 
@@ -319,7 +320,7 @@ section.about .bar > .container > .row{
     margin-bottom: 0;
 }
 
-.mountain{ /* TODO: responsive */
+.mountain{
     position: absolute;
     bottom: -100px;
     right: 0px;
@@ -374,15 +375,15 @@ section.site .ripples{
 .water-scenery{
     position: absolute;
     z-index: 9;
-    width: 100vmax;
+    width: 100%;
     height: 100%;
     right: 0;
 }
 
 .water-floor-sign{
     position: absolute;
-    bottom: 50px;
-    left: 8%;
+    bottom: 20px;
+    left: 50vw;
     width: 145px;
     height: 68px;
     background: url("../img/water-small-sign.png") repeat-x;
@@ -391,10 +392,9 @@ section.site .ripples{
 .water-floor-items{
     position: absolute;
     bottom: 30px;
-    left: 32vw;
-    width: 457px;
+    width: 100%;
     height: 242px;
-    background: url("../img/water-bottom-items.png") repeat-x;
+    background: url("../img/water-bottom-items.png") no-repeat;
 }
 
 section.site .container{
@@ -407,8 +407,7 @@ section.site .row:last-child{
     padding-bottom: 240px;
 }
 
-section.site h1,
-section.projects h1{ /* TODO: responsive */
+section.site h1{
     color: #fff;
 }
 
@@ -418,7 +417,6 @@ section.site h1 + p{
 
 section.projects{
     position: relative;
-    color: #fff;
 
     /* Safari 4-5, Chrome 1-9 */
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bbdefb), to(#1148a2));
@@ -436,30 +434,36 @@ section.projects{
     background: -o-linear-gradient(top, #1148a2, #bbdefb);
 }
 
-section.projects h1+hr+p{
-    padding-left: 130px;
+section.projects .card-panel{
+    margin-top: 10em;
+}
+
+section.projects h1+.divider{
+    background-color: #000;
 }
 
 section.projects .container{
     padding-top: 210px;
 }
 
-.vine-top{ /* TODO: responsive */
-    background: url("../img/vine-top.png") 35vw 0 no-repeat;
+/* TODO: Hanging vines */
+
+.vine-top{
+    background: url("../img/vine-top.png") 0 0 no-repeat;
 }
 
-.vine-repeat{ /* TODO: responsive */
-    background: url("../img/vine-repeat.png") 35vw 0 repeat-y;
+.vine-repeat{
+    background: url("../img/vine-repeat.png") 0 0 repeat-y;
 }
 
-.vine-base{ /* TODO: responsive */ /* TODO: adjust bottom to avoid cutoff flower as needed */
+.vine-base{ /* TODO: adjust bottom to avoid cutoff flower as needed */
     width: 100%;
     height: 510px;
-    margin-top: -55px;
-    background: url("../img/vine-base.png") 35vw 0 no-repeat;
+    margin-top: -65px;
+    background: url("../img/vine-base.png") 3px 0 no-repeat;
 }
 
-.vine-landscape{ /* TODO: responsive */
+.vine-landscape{
     position: relative;
     z-index: 2;
     margin-top: -200px; /** TODO: Lower this for smaller browser widths */
@@ -482,16 +486,26 @@ section.projects .container{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 }
 
-.projects-listing{
-    margin-top: 0;
-    height: 3000px;
+.future-sign{
+    position: absolute;
+    display: none;
+    bottom: 430px;
+    width: 500px;
+    height: 518px;
+    background: url("../img/future-sign.png") no-repeat;
 }
 
-.projects-listing .gocoop .z-depth-1{
-    color: #000;
-    background-color: #fff;
-    padding: 0.82rem 0.75rem;
-    border: 1px solid #a2c0d9;
+.future-sign-small{
+    position: absolute;
+    bottom: 800px;
+    width: 300px;
+    height: 244px;
+    background: url("../img/future-sign-small.png") no-repeat;
+}
+
+.projects-listing{
+    margin-top: 0;
+    padding-bottom: 200px;
 }
 
 .projects-listing .z-depth-1 p{
@@ -499,28 +513,22 @@ section.projects .container{
     margin-bottom: 0;
 }
 
+.projects-listing li:nth-child(2) .card{
+    margin-top: 1rem;
+}
+
 .projects-listing .card{
     margin-top: 10rem;
 }
 
-.projects-listing .gocoop{ /* TODO: responsive */
-    /*width: 521px;*/
-    /*height: 286px;*/
+.projects-listing .gocoop{
+    text-indent: -9999em;
     position: relative;
-    height: 23vw;
-    max-height: 286px;
-    min-height: 150px;
-    background: transparent url("../img/projects-gocoop.png") 30vw no-repeat;
-    background-size: contain;
-}
-
-.projects-listing .gocoop p{
-    position: absolute;
-    top: 24%;
-    width: 27vw;
-    opacity: 0.9;
-    -moz-opacity: 0.9;
-    font-size: 1.8vw;
+    width: 276px;
+    height: 349px;
+    top: -58px;
+    left: 2vw;
+    background: transparent url("../img/projects-gocoop.png") no-repeat;
 }
 
 section.game{
@@ -532,8 +540,8 @@ section.game h1{ /* TODO: responsive */
     color: #fdd835;
 }
 
-section.game h1+hr{
-    border-top-color: #fdd835;
+section.game h1+.divider{
+    background-color: #fdd835;
 }
 
 
@@ -749,6 +757,18 @@ section.game h1+hr{
         bottom: 80px;
         right: 11vw;
     }
+
+    .projects-listing .gocoop{
+        left: 25vw;
+    }
+
+    .future-sign{
+        display: block;
+    }
+
+    .future-sign-small{
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 993px){
@@ -765,7 +785,6 @@ section.game h1+hr{
     .cloud3{
         top: -2vw;
     }
-
 }
 
 @media only screen and (min-width: 1200px){
