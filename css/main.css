@@ -95,76 +95,153 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* Material css overrides */
-.card, .card-panel{
-    opacity: 0.85;
-    -moz-opacity: 0.85;
+/* Materialize css overrides */
+.card-panel {
+    opacity: 0.95;
+    -moz-opacity: 0.95;
     color: #000;
 }
+
+.chip {
+    margin-bottom: 2px;
+}
+
+.video-container {
+    margin-bottom: 2rem;
+}
+
+.collapsible-body p {
+    padding: .75rem .85rem;
+}
+
+.collapsible-body ul {
+    padding: .75rem .75rem 1.5rem 3.85rem;
+}
+
+.input-field input[type=text],
+.input-field input[type=email],
+.input-field textarea {
+    border-bottom-color: #e0e0e0;
+}
+
+.input-field input[type=text]:focus + label,
+.input-field textarea:focus:not([readonly]) + label {
+    color: #0d47a1;
+}
+
+.input-field input[type=text]:focus,
+.input-field textarea:focus:not([readonly]) {
+    border-bottom-color: #0d47a1;
+}
+
+/* End materialize css overrides */
+
+/* Animation states, these should only move things in the js state. */
+
+.no-js #loadingMsg {
+    display: none;
+}
+
+.js .initiallyHidden {
+    display: none;
+}
+
+/** End animation states */
 
 html {
     font-family: 'Titillium Web', sans-serif;
 }
 
-body{
+body {
     background: #bbdefb url("../img/bg.png");
 }
 
-h1, h2, h3, h4, h5, h6{
+blockquote {
+    border-left-color: #0d47a1;
+}
+
+h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     font-weight: bold;
     color: #000;
 }
 
-h5, h6{
+h5, h6 {
     font-weight: 600;
 }
 
-h1{
+h1 {
     font-size: 3rem;
     line-height: 3rem;
 }
 
-p{
+p {
     text-align: justify;
 }
 
-h1 .lg{
+/*p.flow-text:first-letter{
+    font-size: 150%;
+    font-weight:bold;
+    line-height: 100%;
+}*/
+
+h1 .lg {
     font-size: 8rem;
     line-height: 6.2rem;
     float: left;
 }
 
-h1+hr{ /* TODO: responsive */
-
+ul.squares {
+    padding-left: 3rem;
 }
 
-header nav a{
+ul.squares li {
+    list-style-type: square;
+}
+
+.smallMainNav {
+    height: 40px;
+    line-height: 40px;
+}
+
+.hand{
+    cursor: pointer;
+}
+
+header nav a {
     text-transform: uppercase;
 }
 
-section.about{
+section.about {
     position: relative;
 }
 
-section.about .bar{
+section.about .bar {
     background-color: #ffebee;
     border-bottom: 1px solid #a2c0d9;
 }
 
-section.about h1+.divider{
+section.about h1 + .divider {
     background-color: #000;
 }
 
-section.about .bar > .container > .row{
+section.about .bar > .container > .row {
     margin-bottom: 5px;
 }
 
-.my-info{
+section.about .about-text p:last-child {
+    padding-bottom: 100px;
+}
+
+.about-sidenav li {
+    border-bottom: 1px dashed #ccc;
+}
+
+.my-info {
     margin-top: -19px;
 }
 
-.about-scenery{
+.about-scenery {
     position: absolute;
     top: 170px;
     z-index: 5;
@@ -172,7 +249,7 @@ section.about .bar > .container > .row{
     height: 100%;
 }
 
-.about-vertical-line1{
+.about-vertical-line1 {
     position: absolute;
     top: 172px;
 
@@ -183,7 +260,7 @@ section.about .bar > .container > .row{
     background-color: #000;
 }
 
-.about-vertical-line{
+.about-vertical-line {
     position: absolute;
     /*top: -38px;
     left: 15px;
@@ -199,26 +276,29 @@ section.about .bar > .container > .row{
     background-color: #000;
 }
 
-.cloud{
+.cloud {
     position: absolute;
-    background: url("../img/cloud-1.svg") 0 0 no-repeat;
+    /*background: url("../img/cloud-1.svg") 0 0 no-repeat; IE doesn't like this svg, perhaps look into it later. */
+    background: url("../img/cloud-2.svg") 0 0 no-repeat;
     background-size: contain;
 }
 
-.cloud-rev{
+.cloud-rev {
     position: absolute;
     background: url("../img/cloud-2.svg") 0 0 no-repeat;
     background-size: contain;
 }
 
-.cloud1{
+.cloud1 {
+    position: absolute;
     width: 38vw;
     height: 29.4vw;
     top: -35vw;
     right: 2vw;
 }
 
-.cloud2{
+.cloud2 {
+    position: absolute;
     width: 33vw;
     height: 24.8vw;
     top: -3vw;
@@ -226,7 +306,8 @@ section.about .bar > .container > .row{
     z-index: 7;
 }
 
-.cloud3{
+.cloud3 {
+    position: absolute;
     width: 26vw;
     height: 18.8vw;
     top: -20vw;
@@ -234,59 +315,59 @@ section.about .bar > .container > .row{
     z-index: 1;
 }
 
-.plant-white{
+.plant-white {
     position: absolute;
     background: url("../img/plant-swirl-white.svg") no-repeat;
 }
 
-.plant-white-rev{
+.plant-white-rev {
     position: absolute;
     background: url("../img/plant-swirl-white2.svg") no-repeat;
 }
 
-.plant-white1{
+.plant-white1 {
     width: 7vw;
     height: 12vw;
     bottom: 115px;
     left: 8vw;
 }
 
-.plant-white2{
+.plant-white2 {
     width: 8vw;
     height: 13vw;
     bottom: 100px;
     left: 25vw;
 }
 
-.plant-white3{
+.plant-white3 {
     width: 10vw;
     height: 14vw;
     bottom: 90px;
     left: 31vw;
 }
 
-.plant-white4{
+.plant-white4 {
     width: 8vw;
     height: 14vw;
     bottom: 110px;
     right: 22vw;
 }
 
-.plant-white5{
+.plant-white5 {
     width: 14vw;
     height: 24vw;
     bottom: 88px;
     right: 12vw;
 }
 
-.plant-white6{
+.plant-white6 {
     width: 7vw;
     height: 12vw;
     bottom: 120px;
     right: 11vw;
 }
 
-.me-pic{
+.me-pic {
     position: absolute;
     top: -15vw;
     left: 4vw;
@@ -298,25 +379,27 @@ section.about .bar > .container > .row{
     background-size: contain;
 }
 
-.about-text{
+.about-text {
     position: relative;
     z-index: 10;
+    padding-top: 2rem;
 }
 
-.contact-box{
+.contact-box {
     position: relative;
     z-index: 30;
     /*margin-top: 20vw;*/
     background-color: #fff;
     border: 1px solid #a2c0d9;
+    border-radius: 2px;
 }
 
-.contact-box .input-field{
+.contact-box .input-field {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.mountain{
+.mountain {
     position: absolute;
     bottom: -100px;
     right: 0px;
@@ -326,7 +409,7 @@ section.about .bar > .container > .row{
     height: 220px;
 }
 
-section.site{
+section.site {
     position: relative;
     border-style: solid;
     border-width: 25px 0 0 0;
@@ -335,7 +418,7 @@ section.site{
     color: #fff;
 }
 
-section.site > .bg{
+section.site > .bg {
     background: #1148a2 url("../img/bg-site.jpg") repeat-x;
     background-size: contain;
 
@@ -354,21 +437,22 @@ section.site > .bg{
     /* Opera 11.10+ */
     background: -o-linear-gradient(top, #1148a2, #07136e);
 }
-section.site .ripples{
+
+section.site .ripples {
     position: relative;
     background: url("../img/water-shading.png") repeat-x;
 }
 
-.water-floor{
+.water-floor {
     position: absolute;
     bottom: -450px;
     right: 0;
-    width: 100vmax;
+    width: 100%;
     height: 679px;
     background: url("../img/water-bottom.png") repeat-x;
 }
 
-.water-scenery{
+.water-scenery {
     position: absolute;
     z-index: 9;
     width: 100%;
@@ -376,7 +460,7 @@ section.site .ripples{
     right: 0;
 }
 
-.water-floor-sign{
+.water-floor-sign {
     position: absolute;
     bottom: 20px;
     left: 50vw;
@@ -385,7 +469,7 @@ section.site .ripples{
     background: url("../img/water-small-sign.png") repeat-x;
 }
 
-.water-floor-items{
+.water-floor-items {
     position: absolute;
     bottom: 30px;
     width: 100%;
@@ -393,25 +477,30 @@ section.site .ripples{
     background: url("../img/water-bottom-items.png") 60px no-repeat;
 }
 
-section.site .container{
+section.site .container {
     background: transparent url("../img/castle.png") 30% bottom no-repeat;
     background-size: auto 80%;
     min-height: 1000px;
 }
 
-section.site .row:last-child{
+section.site .row:last-child {
     padding-bottom: 385px;
 }
 
-section.site h1{
+section.site h1 {
     color: #fff;
 }
 
-section.site h1 + p{
+section.site h1 + p {
     margin-top: 35px;
 }
 
-section.projects{
+section.site .site-text{
+    position: relative;
+    z-index: 10;
+}
+
+section.projects {
     position: relative;
 
     /* Safari 4-5, Chrome 1-9 */
@@ -430,50 +519,60 @@ section.projects{
     background: -o-linear-gradient(top, #1148a2, #bbdefb);
 }
 
-section.projects .card-panel{
+section.projects .intro {
     margin-top: 10em;
+    margin-bottom: 0;
 }
 
-section.projects h1+.divider{
+section.projects h1 + .divider {
     background-color: #000;
 }
 
-section.projects .container{
+section.projects .container {
     padding-top: 210px;
 }
 
-.vine-top{
+.project-thumb {
+    border-radius: 4px;
+}
+
+.strp-container {
+    /* TODO: Maybe put something cool on the edge of this? */
+
+}
+
+.vine-top {
     background: url("../img/vine-top.png") 0 0 no-repeat;
 }
 
-.vine-repeat{
+.vine-repeat {
     background: url("../img/vine-repeat.png") 0 0 repeat-y;
 }
 
-.vine-landscape{
+.vine-landscape {
     position: relative;
     z-index: 4;
     margin-top: -200px; /** TODO: Lower this for smaller browser widths */
     width: 100%;
     height: 697px;
-    background: url("../img/vine-landscape.png") no-repeat;
-    background-size: cover;
+    /*background: url("../img/vine-landscape.png") no-repeat;
+    background-size: cover;*/
 }
 
-.vine-landscape-gradient{
+.vine-landscape-gradient {
     position: absolute;
     z-index: 1;
     bottom: 400px;
     height: 40rem;
     width: 100%;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,000000+100&0+25,1+100 */
-    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(191,191,191,0) 25%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(191,191,191,0) 25%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(191,191,191,0) 25%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(191, 191, 191, 0) 25%, rgba(0, 0, 0, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(191, 191, 191, 0) 25%, rgba(0, 0, 0, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(191, 191, 191, 0) 25%, rgba(0, 0, 0, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#000000', GradientType=0); /* IE6-9 */
 }
 
-.future-sign{
+.future-sign {
     position: absolute;
     display: none;
     z-index: 3;
@@ -484,7 +583,7 @@ section.projects .container{
     background: url("../img/future-sign.png") no-repeat;
 }
 
-.future-sign-small{
+.future-sign-small {
     position: absolute;
     z-index: 3;
     bottom: 800px;
@@ -493,24 +592,29 @@ section.projects .container{
     background: url("../img/future-sign-small.png") no-repeat;
 }
 
-.projects-listing{
+.projects-listing {
     margin-top: 0;
     padding-bottom: 200px;
 }
 
-.projects-listing .card-panel{
+/*.projects-listing .card-panel{
     margin-bottom: 0;
-}
+}*/
 
-.projects-listing li:last-child{
+.projects-listing > li:last-child {
     padding-bottom: 20rem;
 }
 
-.projects-listing .card{
+.projects-listing .card-panel {
     margin-top: 10rem;
+    padding: 0;
 }
 
-.projects-listing .gocoop{
+.projects-listing .card-panel .card-content {
+    padding: .75rem;
+}
+
+.projects-listing .gocoop {
     text-indent: -9999em;
     position: relative;
     width: 276px;
@@ -520,26 +624,34 @@ section.projects .container{
     background: transparent url("../img/projects-gocoop.png") no-repeat;
 }
 
-section.game{
+.card-panel .gov {
+    padding: .85rem;
+}
+
+section.game {
     position: relative;
     background: #000 url("../img/bg-stars.jpg");
     color: #fdd835;
 }
 
-section.game .container{
+section.game .container {
     position: relative;
     z-index: 2;
 }
 
-section.game h1{ /* TODO: responsive */
+section.game h1 { /* TODO: responsive */
     color: #fdd835;
 }
 
-section.game h1+.divider{
+section.game h1 + .divider {
     background-color: #fdd835;
 }
 
-.stars{
+section.game .row:last-child {
+    margin-bottom: 0;
+}
+
+.stars {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -547,7 +659,18 @@ section.game h1+.divider{
     background: url("../img/bg-stars.jpg");
 }
 
-.big-planet{
+.intro-planet{
+    position: absolute;
+    visibility: hidden;
+    top: -400px;
+    z-index: 0;
+    width: 100%;
+    height: 300px;
+    background: url("../img/mars.svg") center no-repeat;
+    background-size: contain;
+}
+
+.big-planet {
     position: absolute;
     z-index: 2;
     bottom: -330px;
@@ -557,10 +680,18 @@ section.game h1+.divider{
     background-size: contain;
 }
 
+footer.page-footer {
+    margin-top: 0;
+    background: url("../img/bg-stars.jpg");
+}
 
+footer.page-footer * {
+    color: #fff;
+}
 
-
-
+footer.page-footer a {
+    color: #fdd835;
+}
 
 /* ==========================================================================
    Helper classes
@@ -642,172 +773,170 @@ section.game h1+.divider{
 
 /* === MAX WIDTHS ========================================*/
 
-@media only screen and (max-width: 600px){
-    h1{
+@media only screen and (max-width: 600px) {
+    h1 {
         font-size: 2.5rem;
         line-height: 2.5rem;
     }
 
-    h1 .lg{
+    h1 .lg {
         font-size: 10rem;
         line-height: 7.2rem;
     }
 
-    h6{
+    h6 {
         font-size: .7rem;
     }
 }
 
-@media only screen and (max-width: 360px){
+@media only screen and (max-width: 360px) {
 
 }
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 320px) {
 
-    h5{
+    h5 {
         font-size: 1.3rem;
     }
 
-    h6{
+    h6 {
         font-size: .6rem;
     }
 }
 
 /* === MIN WIDTHS ========================================*/
 
-
-@media only screen and (min-width: 361px){
-    .cloud2{
+@media only screen and (min-width: 361px) {
+    .cloud2 {
         width: 48vw;
         height: 39.8vw;
     }
 
-    .cloud3{
+    .cloud3 {
         top: -12vw;
     }
 }
 
-@media only screen and (min-width: 601px){
+@media only screen and (min-width: 601px) {
 
-    h1{
+    h1 {
         font-size: 4.6rem;
         line-height: 4rem;
     }
 
-    h1 .lg{
+    h1 .lg {
         font-size: 12rem;
         line-height: 8.6rem;
         float: left;
     }
 
-    h5{
+    h5 {
         font-size: 1.5rem;
     }
 
-    .me-pic{
+    .me-pic {
         top: -3vw;
         left: 2vw;
     }
 
-    .contact-box{
+    .contact-box {
         margin-top: 20vw;
     }
 
-    .cloud1{
+    .cloud1 {
         top: -23vw;
     }
 
-    .cloud2{
+    .cloud2 {
         width: 33vw;
         height: 24.8vw;
         top: 5vw;
         left: 25vw;
     }
 
-    .cloud3{
+    .cloud3 {
         top: -5vw;
     }
 
-    .plant-white1{
+    .plant-white1 {
         width: 3vw;
         height: 6vw;
         bottom: 115px;
         left: 8vw;
     }
 
-    .plant-white2{
+    .plant-white2 {
         width: 5vw;
         height: 8vw;
         bottom: 100px;
         left: 25vw;
     }
 
-    .plant-white3{
+    .plant-white3 {
         width: 5vw;
         height: 8vw;
         bottom: 90px;
         left: 29vw;
     }
 
-    .plant-white4{
+    .plant-white4 {
         width: 6vw;
         height: 12vw;
         bottom: 60px;
         right: 20vw;
     }
 
-    .plant-white5{
+    .plant-white5 {
         width: 10vw;
         height: 20vw;
         bottom: 30px;
         right: 12vw;
     }
 
-    .plant-white6{
+    .plant-white6 {
         width: 5vw;
         height: 10vw;
         bottom: 80px;
         right: 11vw;
     }
 
-    .gocoop{
+    .gocoop {
         margin-left: .85rem;
     }
 
-    .future-sign{
+    .future-sign {
         display: block;
     }
 
-    .future-sign-small{
+    .future-sign-small {
         display: none;
     }
 
 }
 
-@media only screen and (min-width: 993px){
+@media only screen and (min-width: 993px) {
 
-
-    .my-info{
+    .my-info {
         margin-top: -40px;
     }
 
-    .cloud1{
+    .cloud1 {
         top: -15vw;
     }
 
-    .cloud3{
+    .cloud3 {
         top: -2vw;
     }
 }
 
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 1200px) {
 
 }
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -824,8 +953,9 @@ section.game h1+.divider{
     *:first-letter,
     *:first-line {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
+        color: #000 !important;
+        /* Black prints faster:
+                                          http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
     }
@@ -847,7 +977,6 @@ section.game h1+.divider{
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
@@ -863,7 +992,6 @@ section.game h1+.divider{
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-
     thead {
         display: table-header-group;
     }
