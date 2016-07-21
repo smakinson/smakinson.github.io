@@ -1,6 +1,8 @@
 (function ($) {
     $(function () {
 
+        $('#jsoffmsg').remove();
+
         $('.button-collapse').sideNav();
         $('.modal-trigger').leanModal();
         $('.scrollspy').scrollSpy();
@@ -118,40 +120,6 @@
                 }
             );
         }
-        /*
-        TODO: Decide if I dislike this, doesnt add anything.
-        new ScrollMagic.Scene({ reverse: false, triggerElement: '#site', offset: 0, tweenChanges: true })
-            .setTween(TweenMax.staggerFrom('.site-text *', 1, { opacity: 0, x: '-=100' }, 0.2))
-            .addTo(scrollController);
-
-        new ScrollMagic.Scene({ reverse: true, triggerElement: '#site', offset: 0, tweenChanges: true })
-            .setTween(TweenMax.from('#site .container', 2, { backgroundPositionY: '+=300' }))
-            .addTo(scrollController);
-
-        new ScrollMagic.Scene({ reverse: false, triggerElement: '#projects .card-panel.intro', offset: -400, tweenChanges: true })
-            .setTween(TweenMax.from('#projects .card-panel.intro', .5, { opacity: 0, y: '-=200', ease: Linear.easeIn }, 1))
-            .addTo(scrollController);
-
-        new ScrollMagic.Scene({ reverse: false, triggerElement: '#projects .card-panel.mindcometPanel', offset: -400, tweenChanges: true })
-            .setTween(TweenMax.from('#projects .card-panel.mindcometPanel', .5, { opacity: 0, y: '-=200', ease: Linear.easeIn }, 1))
-            .addTo(scrollController);
-
-        new ScrollMagic.Scene({ reverse: false, triggerElement: '#projects .card-panel.govPanel', offset: -400, tweenChanges: true })
-            .setTween(TweenMax.from('#projects .card-panel.govPanel', .5, { opacity: 0, y: '-=200', ease: Linear.easeIn }, 1))
-            .addTo(scrollController);
-
-        new ScrollMagic.Scene({ reverse: false, triggerElement: '#projects .card-panel.disneyPanel', offset: -400, tweenChanges: true })
-            .setTween(TweenMax.from('#projects .card-panel.disneyPanel', .5, { opacity: 0, y: '-=200', ease: Linear.easeIn }, 1))
-            .addTo(scrollController);
-
-        new ScrollMagic.Scene({ reverse: false, triggerElement: '#projects .card-panel.squarefactorPanel', offset: -400, tweenChanges: true })
-            .setTween(TweenMax.from('#projects .card-panel.squarefactorPanel', .5, { opacity: 0, y: '-=200', ease: Linear.easeIn }, 1))
-            .addTo(scrollController);
-
-        new ScrollMagic.Scene({ reverse: false, triggerElement: '#projects .future-sign', offset: -800, tweenChanges: true })
-            .setTween(TweenMax.from('#projects .future-sign', .5, { y: '+=400', ease: Linear.easeIn }, 1))
-            .addTo(scrollController);
-            */
 
         TweenMax.to('.big-planet', 8, { y: '+=50', repeat: -1, yoyo: true, ease: Quad.easeInOut });
 
@@ -241,7 +209,7 @@
         contactFormTimeline.add(TweenLite.fromTo('#contactCloseBtn', .3, { autoAlpha: 0 }, { autoAlpha: 1 }));
 
         //$(window).scroll(function () {
-            // TODO: Close or move contact form if its open?
+
         //});
 
         $('.open-contact').mousedown(function () {
@@ -288,8 +256,14 @@
     }
 
     function formSuccess() {
-        // TODO: Show a success indicator.
+
         closeContactForm();
+
+        var f = $('#contactForm');
+
+        if(f.length > 0){
+            f[0].reset();
+        }
     }
 
     function openContactForm() {
