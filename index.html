@@ -1,1 +1,918 @@
-<p>Hello World</p>
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- TODO: Social Media Items -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/vendor/normalize.css">
+    <link rel="stylesheet" href="css/vendor/materialize.min.css">
+    <link rel="stylesheet" href="css/vendor/strip.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        #loadingMsg {
+            position: absolute;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #000;
+            width: 100%;
+            text-align: center;
+            top: 20%;
+        }
+
+        #loadingMsg img{
+            margin: 0 auto;
+            width: 60%;
+        }
+
+        .loadingMsgAni{
+            animation: loadingCloudAnimationFrames linear 4s;
+            animation-iteration-count: infinite;
+            transform-origin: 50% 50%;
+            -webkit-animation: loadingCloudAnimationFrames linear 4s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-transform-origin: 50% 50%;
+            -moz-animation: loadingCloudAnimationFrames linear 4s;
+            -moz-animation-iteration-count: infinite;
+            -moz-transform-origin: 50% 50%;
+            -o-animation: loadingCloudAnimationFrames linear 4s;
+            -o-animation-iteration-count: infinite;
+            -o-transform-origin: 50% 50%;
+            -ms-animation: loadingCloudAnimationFrames linear 4s;
+            -ms-animation-iteration-count: infinite;
+            -ms-transform-origin: 50% 50%;
+        }
+
+        @keyframes loadingCloudAnimationFrames {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            16% {
+                transform: translate(0px, -17px);
+            }
+            50% {
+                transform: translate(0px, -53px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+
+        @-moz-keyframes loadingCloudAnimationFrames {
+            0% {
+                -moz-transform: translate(0px, 0px);
+            }
+            16% {
+                -moz-transform: translate(0px, -17px);
+            }
+            50% {
+                -moz-transform: translate(0px, -53px);
+            }
+            100% {
+                -moz-transform: translate(0px, 0px);
+            }
+        }
+
+        @-webkit-keyframes loadingCloudAnimationFrames {
+            0% {
+                -webkit-transform: translate(0px, 0px);
+            }
+            16% {
+                -webkit-transform: translate(0px, -17px);
+            }
+            50% {
+                -webkit-transform: translate(0px, -53px);
+            }
+            100% {
+                -webkit-transform: translate(0px, 0px);
+            }
+        }
+
+        @-o-keyframes loadingCloudAnimationFrames {
+            0% {
+                -o-transform: translate(0px, 0px);
+            }
+            16% {
+                -o-transform: translate(0px, -17px);
+            }
+            50% {
+                -o-transform: translate(0px, -53px);
+            }
+            100% {
+                -o-transform: translate(0px, 0px);
+            }
+        }
+
+        @-ms-keyframes loadingCloudAnimationFrames {
+            0% {
+                -ms-transform: translate(0px, 0px);
+            }
+            16% {
+                -ms-transform: translate(0px, -17px);
+            }
+            50% {
+                -ms-transform: translate(0px, -53px);
+            }
+            100% {
+                -ms-transform: translate(0px, 0px);
+            }
+        }
+
+        #loadingMsg > div {
+            height: 100%;
+            position: relative;
+        }
+
+        #loadingMsg > div p {
+            position: absolute;
+            width: 100%;
+            top: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar-fixed">
+        <nav class="z-depth-1 grey darken-2" role="navigation">
+            <div class="nav-wrapper container">
+                <div class="nav-wrapper">
+                    <!-- link to the repo here? -->
+                    <a href="#" class="brand-logo right">&nbsp;</a>
+                    <ul id="nav-main" class="left hide-on-small-and-down initiallyHidden">
+                        <li class="nav-about active"><a href="#about" class="">Hello</a></li>
+                        <li class="nav-site"><a href="#site" class="">About <span class="hide-on-med-and-down">This Site</span></a></li>
+                        <li class="nav-projects"><a href="#projects" class="">Work <span class="hide-on-med-and-down">History</span></a></li>
+                        <li class="nav-game"><a href="#game" class="">App <span class="hide-on-med-and-down">For This Website!</span></a></li>
+                    </ul>
+                    <ul id="nav-mobile" class="side-nav">
+                        <li><a href="#" class="waves-effect">Hello</a></li>
+                        <li><a href="#" class="waves-effect">About This Site</a></li>
+                        <li><a href="#" class="waves-effect">Work History</a></li>
+                        <li><a href="#" class="waves-effect">App For This Website!</a></li>
+                    </ul>
+                    <a href="#" data-activates="nav-mobile" class="button-collapse hide-on-med-and-up"><i
+                            class="material-icons">menu</i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!--[if lt IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<p id="jsoffmsg" class="browserupgrade">You have disabled JavaScript, this site will not work as designed.</p>
+
+
+<div id="loadingMsg" class="loadingMsgAni">
+    <div>
+        <img src="img/cloud-2.svg">
+        <p>Wait For It&#8230;</p>
+    </div>
+</div>
+
+<section class="about scrollspy initiallyHidden" id="about">
+    <div class="intro-planet"></div>
+    <div class="mountain"></div>
+    <div class="bar">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h1><span class="lg">A</span> bout Me</h1>
+                    <div class="divider"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s7 offset-s5 m8 offset-m4 my-info">
+                    <h5>Shawn Makinson</h5>
+                    <h6>Web Technologist since 1999</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-scenery">
+        <div class="me-pic"></div>
+
+        <div class="cloud cloud1"></div>
+        <div class="cloud-rev cloud2"></div>
+        <div class="cloud cloud3"></div>
+        <div class="plant-white-rev plant-white1"></div>
+        <div class="plant-white-rev plant-white2"></div>
+        <div class="plant-white plant-white3"></div>
+        <div class="plant-white plant-white4"></div>
+        <div class="plant-white plant-white5"></div>
+        <div class="plant-white plant-white6"></div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col s12 m8 push-m4">
+                <div class="about-text">
+                    <h4>Something Personal</h4>
+                    <p class="flow-text">I was born in Florida and I have always lived there. I have a wife and family and I love them very much. I enjoy the mountains when I get the chance, they make for a great change of scenery!</p>
+                    <h4>Something Professional</h4>
+                    <p class="flow-text">Having been at this stuff for a long time now, I attended the first Flash Forward in 2000 and I have battled Netscape 4. Through the years many things have changed and some things have stayed the same. What was for the web is now for almost everything. HTML, CSS, JavaScript to build websites, apps, IoT, digital signage, games, the list goes on&#8230; </p>
+                    <p class="flow-text">I have used Flash for banners, games, online apps that act like HTML, hardware simulations, experiential museum installs and retail kiosks ( as Air ). HTML, CSS and JavaScript for your website, kiosk or app. Content management done in XML, JSON, ASP, PHP, Ruby, Python, JavaScript, the &quot;Cloud&quot;.</p>
+                    <p class="flow-text" id="navShrinkTarget">The technology is not the determinant, the project goal and its best solution are. Today there are so many options that we can pick and choose, adapt and read the documentation as needed.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4 pull-m8">
+                <div class="contact-box row z-depth-1">
+
+                    <div class="card-panel red darken-4" id="formErrorMessage" style="display: none;">
+                        <div class="valign-wrapper white-text">
+                        <i class="material-icons" style="padding-right: 10px;">error</i> Please verify your input.
+                        </div>
+                    </div>
+
+                    <form class="col s12" id="contactForm"
+                          action="https://docs.google.com/forms/d/1wm6y8Nbys6Po1GeQm2yVqtqnfLW88op7i5zYNoiRnp4/formResponse">
+                        <div class="row">
+                            <div class="col s12">
+                                <a class="right waves-effect btn-flat" id="contactCloseBtn" style="visibility: hidden; opacity: 0; margin-top: .5rem">X</a>
+                                <h5>Contact Me</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="contact-name" type="text" class="validate" maxlength="255" minlength="2" name="entry.1153781679">
+                                <label for="contact-name" data-error="Please enter your name">Your Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="contact-email" type="email" class="validate" maxlength="255" minlength="5" name="entry.946601398">
+                                <label for="contact-email" data-error="Please enter a valid email">Email Address</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="contact-question"
+                                          class="materialize-textarea" maxlength="9999" name="entry.346234414"></textarea>
+                                <label for="contact-question" data-error="Please enter a question or comment">Question(s)</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <button class="btn waves-effect waves-light blue darken-4" type="submit" name="action" id="formSubmit">
+                                    Send It!
+                                </button>
+                                <div class="preloader-wrapper small active" id="formWait" style="display: none;">
+                                    <div class="spinner-layer spinner-blue-only">
+                                        <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                        </div><div class="gap-patch">
+                                        <div class="circle"></div>
+                                    </div><div class="circle-clipper right">
+                                        <div class="circle"></div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="col s12">
+                        <div class="divider"></div>
+                        <div class="divider"></div>
+                        <ul class="about-sidenav">
+                            <li><a href="http://www.linkedin.com/in/shawnmakinson">Contact Me on LinkedIn</a></li>
+                            <li><a class="modal-trigger" href="#modal-bio">A Brief Bio <span class="hide-on-med-only">For Me </span>Would Read</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-bio" class="modal">
+            <div class="modal-content">
+                <h4>My Brief Bio</h4>
+                <blockquote>
+                    <p>Shawn has been using technology to solve problems since 1997, including clients such as SpeedTV, Upper Deck, Coors, Heineken, Disney, Tupperware Brands, Motorola/Nextel, Bose, 3M, Harmonic, Riteaid and a wide variety of additional clients. His goal is to use the best technology for the solution at hand. His expertise stretches from websites and mobile or online applications, to proof of concept demos, to content managed multi-touch interactives. Shawn has created interactive installations for Tupperware Headquarters in Orlando Florida, 3M innovation Center in St. Paul Minnesota and the Witte Museum in San Antonio Texas as well as Motorola kiosks for printing tattoos and laser etching to mobile phones.</p>
+                    <p>Shawn has a passion for learning and pushing the boundaries using the latest interactive technologies. In his free time, Shawn enjoys being a devoted husband since 2003 and father of two beautiful girls.</p>
+                </blockquote>
+            </div>
+            <div class="modal-footer">
+                <a class="modal-action modal-close waves-effect btn-flat">Close</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="site scrollspy initiallyHidden" id="site">
+    <div class="bg">
+        <div class="ripples">
+            <div class="water-scenery">
+                <div class="water-floor"></div>
+                <div class="water-floor-items"></div>
+                <div class="water-floor-sign"></div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m11">
+                        <div class="site-text">
+                            <h1><span class="lg">T</span> his Website</h1>
+                            <div class="divider"></div>
+                            <p class="flow-text">As you can tell by the casual design, this is my personal website. I was going for an interesting combination of illustrations with some photograph imagery mixed in. The result is a single page website with each section continuing to a neighboring world of some sorts, its almost like they are all connected through some means. I am a Zelda fan, so I may have been drawn somewhat towards a Wind Waker style as it came together. The goal was to build something that is responsive but not so common place and grid-like in the way it feels, but still take advantage of a responsive framework.</p>
+                            <p class="flow-text">The website has a fair amount of content, but hopefully not so much that it is overwhelming. I wanted to include a bit of animation, but I resisted taking it too far and have included only some subtle movement. Remember <a href="https://www.youtube.com/watch?v=9Y-ESJS911c" target="_blank">Gabocorp</a>? Scroll down and check out the projects below. I tried to include a bit of a variety, as well as some that were the most rewarding. If you enjoy the site and want to let me know you can <a class="open-contact hand">contact me using the form above</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="projects scrollspy initiallyHidden" id="projects">
+    <div class="vine-repeat">
+        <div class="vine-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card-panel hoverable intro">
+                            <h1><span class="lg">S</span> ome History</h1>
+                            <div class="divider"></div>
+                            <p class="flow-text">
+                                <img src="img/projects-gocoop.png" alt="" class="right gocoop">
+                                I began at GoCo-op, one of the early B2B companies for the hospitality industry, a few years before the &quot;dot com bubble&quot; burst. I was hired when the total number of employees was in the single digits and continued as it climbed to several hundred and back down.</p>
+                            <p class="flow-text">
+                                Below is a timeline showing a variety of projects I have worked on and a history of my professional time. I bet you did&rsquo;t know they grew on tree&rsquo;s! I decided to put the older work first on the timeline to encourage viewing it as you scroll down.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <ul class="projects-listing">
+                            <li>
+                                <div class="card-panel hoverable mindcometPanel">
+                                    <!-- TODO: srcset -->
+                                    <img class="responsive-img" src="img/projects-hero-mindcomet.jpg" alt="">
+                                    <div class="card-content">
+                                        <h5>2001 - 2004</h5>
+                                        <h6>MindComet<br><small>Senior Solutions Architect</small></h6>
+                                        <div class="chip">HTML</div>
+                                        <div class="chip">JavaScript</div>
+                                        <div class="chip">CSS</div>
+                                        <div class="chip">ActionScript</div>
+                                        <div class="chip">PHP</div>
+                                        <div class="chip">ASP</div>
+                                        <div class="chip">ColdFusion</div>
+                                        <div class="chip">MySQL</div>
+                                        <div class="chip">SQL Server</div>
+                                        <div class="chip">Photoshop etc.</div>
+
+                                        <p>Daily duties included corporate website development and maintenance, advergame development, custom CMS development, various internal projects, client website development.</p>
+                                        <div class="divider"></div>
+
+                                        <h5>SPEED Channel Website</h5>
+                                        <p>The ultimate race fans stop for news &amp; events. This extremely popular website was paired with a custom CMS written in PHP. We called it VROOM and the client loved it. The data was stored in MySQL. This was back in the day of IE on the Mac, yikes!</p>
+                                        <div class="row">
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-speedtv.jpg" class="strip" data-strip-group="project-speed"><img src="img/projects-thumb-speedtv.jpg"
+                                                        class="responsive-img z-depth-1 project-thumb" alt="SPEEDTV"></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-speedtv2.jpg" class="strip" data-strip-group="project-speed"><img src="img/projects-thumb-speedtv2.jpg"
+                                                        class="responsive-img z-depth-1 project-thumb" alt="SPEEDTV"></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-speedtv3.jpg" class="strip" data-strip-group="project-speed"><img src="img/projects-thumb-speedtv3.jpg"
+                                                        class="responsive-img z-depth-1 project-thumb" alt="SPEEDTV"></a></p>
+                                            </div>
+                                        </div>
+                                        <div class="divider"></div>
+                                        <h5>DNP Ribbon Runner</h5>
+                                        <p>This custom Flash application allowed customers to filter and search for DNP products. Coldfusion components were used to search for and return the dataset on the fly. This was during the time when &quot;Rich Internet Applications&quot; were just coming on to the scene and Macromedia was still around, they even did a case study on the application.</p>
+                                        <div class="row">
+                                            <div class="col s6">
+                                                <p class="center-align"><a href="img/projects-dnp.jpg" class="strip" data-strip-group="project-dnp"><img src="img/projects-thumb-dnp.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6">
+                                                <p class="center-align"><a href="img/projects-dnp2.jpg" class="strip" data-strip-group="project-dnp"><img src="img/projects-thumb-dnp2.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                        </div>
+                                        <div class="divider"></div>
+                                        <h5>Sunshine Network Derby Challenge Game</h5>
+                                        <p>A custom advergame that let players virtually pick a horse and play to win! I can still hear the custom recorded voiceovers we used as I type this, &quot;Pick a Horse!&quot;</p>
+                                        <div class="row">
+                                            <div class="col s6 m3">
+                                                <p><a href="img/projects-derby.jpg" class="strip" data-strip-group="project-derby"><img src="img/projects-thumb-derby.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m3">
+                                                <p><a href="img/projects-derby2.jpg" class="strip" data-strip-group="project-derby"><img src="img/projects-thumb-derby2.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m3">
+                                                <p><a href="img/projects-derby3.jpg" class="strip" data-strip-group="project-derby"><img src="img/projects-thumb-derby3.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m3">
+                                                <p><a href="img/projects-derby4.jpg" class="strip" data-strip-group="project-derby"><img src="img/projects-thumb-derby4.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                        </div>
+                                        <div class="divider"></div>
+                                        <h5>Heineken&reg; &amp; Amsel&reg; Light Mardi Gras Street Party Game</h5>
+                                        <p>A custom advergame developed in Flash where the player could walk through a Mardi Gras city scene jumping on ledges, bouncing on vendor stands and collecting items all while watching out for the baddies. This one even had a hidden area way up in the sky where some extra items could be easily collected to add to your high  score.</p>
+                                        <div class="row">
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-mardigras.jpg" class="strip" data-strip-group="project-mardigras"><img src="img/projects-thumb-mardigras.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-mardigras2.jpg" class="strip" data-strip-group="project-mardigras"><img src="img/projects-thumb-mardigras2.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-mardigras3.jpg" class="strip" data-strip-group="project-mardigras"><img src="img/projects-thumb-mardigras3.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                        </div>
+                                        <div class="divider"></div>
+                                        <h5>The Copenhagen&reg; $100,000 On-line Poker Championship</h5>
+                                        <p>A custom built online poker game was developed using Flash. The game action was driven via a messaging system that was in communication with custom built socket server. In other words the game proceeded based on instructions sent from the server as it moved the game along based on the replies from the game. For example betting or placing a card.</p>
+                                        <div class="row">
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-poker.jpg" class="strip" data-strip-group="project-poker"><img src="img/projects-thumb-poker.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-poker2.jpg" class="strip" data-strip-group="project-poker"><img src="img/projects-thumb-poker2.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-poker3.png" class="strip" data-strip-group="project-poker"><img src="img/projects-thumb-poker3.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                        </div>
+                                        <div class="divider"></div>
+                                        <h5>Coors&reg; Get Some Summer Game</h5>
+                                        <p>A custom advergame developed in Flash where the player could walk around a party scene and attempt to keep everybody happy as they ordered specific Coors&reg; drinks. You had to be fast since you can only carry so many at a time. Sometimes the customer would even complement you!</p>
+                                        <div class="row">
+                                            <div class="col s6 m3">
+                                                <p><a href="img/projects-gss.jpg" class="strip" data-strip-group="project-summer"><img src="img/projects-thumb-gss.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m3">
+                                                <p><a href="img/projects-gss2.jpg" class="strip" data-strip-group="project-summer"><img src="img/projects-thumb-gss2.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m3">
+                                                <p><a href="img/projects-gss3.jpg" class="strip" data-strip-group="project-summer"><img src="img/projects-thumb-gss3.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m3">
+                                                <p><a href="img/projects-gss4.jpg" class="strip" data-strip-group="project-summer"><img src="img/projects-thumb-gss4.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-gss5.jpg" class="strip" data-strip-group="project-summer"><img src="img/projects-thumb-gss5.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-gss6.jpg" class="strip" data-strip-group="project-summer"><img src="img/projects-thumb-gss6.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-gss7.jpg" class="strip" data-strip-group="project-summer"><img src="img/projects-thumb-gss7.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                        </div>
+                                        <div class="divider"></div>
+                                        <h6>Some Other Clients Include</h6>
+                                        <ul>
+                                            <li>Upper Deck</li>
+                                            <li>Nascar</li>
+                                            <li>Siemens Westinghouse</li>
+                                            <li>Fiserv</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card-panel hoverable govPanel">
+                                    <div class="green darken-3 gov center-align">
+                                        <i class="large material-icons white-text">lock</i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h5>2004 - 2005</h5>
+                                        <h6>Government<br><small>Contractor ( Developer )</small></h6>
+                                        <div class="chip">HTML</div>
+                                        <div class="chip">JavaScript</div>
+                                        <div class="chip">CSS</div>
+                                        <div class="chip">ActionScript</div>
+                                        <p>Daily duties included what ever I was told to do.</p>
+                                        <div class="divider"></div>
+                                        <h6>Top Secret</h6>
+                                        <p>If I told you&#8230; Moving on. &#128522;</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card-panel hoverable disneyPanel">
+                                    <img class="responsive-img" src="img/projects-hero-photostore.png" alt="">
+                                    <div class="card-content">
+                                        <h5>2005 - 2007</h5>
+                                        <h6>Disney Photo Imaging<br><small>Contractor ( Developer )</small></h6>
+                                        <div class="chip">HTML</div>
+                                        <div class="chip">JavaScript</div>
+                                        <div class="chip">CSS</div>
+                                        <div class="chip">ActionScript</div>
+                                        <div class="chip">JSON/XML</div>
+                                        <div class="chip">Photoshop etc.</div>
+                                        <p>This was an off site project that was reported weekly. I attended on site meetings as needed.</p>
+                                        <div class="divider"></div>
+                                        <h5>Disney Photo Store</h5>
+                                        <p>The goal of this project was to develop an online builder for the Disney Photopass holders to order customized Disney branded products. The architecture allowed various product builders to be utilized and loaded on demand. For example a photo book builder or a photo card builder. Photopass holders could enter the unique id form their pass into the builder to access the photos that were taken during their visit to the parks as well as upload their own photos.</p>
+                                        <p>I was responsible for the architecture and development as well as integration with the Disney API for displaying photos, specifying customizations and ordering products, etc.</p>
+                                        <div class="row">
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-photostore.jpg" class="strip" data-strip-group="project-photostore"><img src="img/projects-thumb-photostore.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-photostore2.jpg" class="strip" data-strip-group="project-photostore"><img src="img/projects-thumb-photostore2.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-photostore3.jpg" class="strip" data-strip-group="project-photostore"><img src="img/projects-thumb-photostore3.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m6">
+                                                <p class="center-align"><a href="img/projects-photostore4.jpg" class="strip" data-strip-group="project-photostore"><img src="img/projects-thumb-photostore4.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m6">
+                                                <p class="center-align"><a href="img/projects-photostore5.jpg" class="strip" data-strip-group="project-photostore"><img src="img/projects-thumb-photostore5.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card-panel hoverable squarefactorPanel">
+                                    <img class="responsive-img" src="img/projects-hero-squarefactor.jpg" alt="">
+                                    <div class="card-content">
+                                        <h5>2004 - 2016</h5>
+                                        <h6>Squarefactor<br><small>Owner and Developer</small></h6>
+                                        <div class="chip">HTML</div>
+                                        <div class="chip">JavaScript</div>
+                                        <div class="chip">CSS</div>
+                                        <div class="chip">ActionScript</div>
+                                        <div class="chip">Adobe AIR</div>
+                                        <div class="chip">Flex</div>
+                                        <div class="chip">C#</div>
+                                        <div class="chip">Lua</div>
+                                        <div class="chip">Python</div>
+                                        <div class="chip">Django</div>
+                                        <div class="chip">JSON/XML</div>
+                                        <div class="chip">Photoshop etc.</div>
+
+                                        <h6>SQUAREFACTOR Demo Reel</h6>
+                                        <div class="video-container z-depth-1">
+                                            <iframe src="https://player.vimeo.com/video/172642197?title=0&byline=0&portrait=0" width="853" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                        </div>
+                                        <div class="divider"></div>
+                                        <h5>Tupperware Brands Confidence Center<br><small>14901 South Orange Blossom Trail Orlando, FL 32837</small></h5>
+
+                                        <p>Tupperware created this center in order to celebrate and honor the company’s heritage as well as to convey and shine a spotlight on both its present and future endeavors of this American icon. I was responsible for the development and installation of the interactives. Most of them are included in the walk through below. In order to see the Photolier, look across the room at the 55 second mark. The interactives are content managed via a browser based admin website.</p>
+
+                                        <ul class="collapsible" data-collapsible="accordion">
+                                            <li>
+                                                <div class="collapsible-header"><i class="material-icons">label_outline</i>Project Details</div>
+                                                <div class="collapsible-body">
+                                                    <p>The Tupperware Brands Confidence Center creatively combines historical narrative and visual storytelling through films and interactive media as well as changeable product displays.</p>
+                                                    <p>Multi-media screens and interactive touchscreen kiosks allow visitors to explore information on the company history, new products, worldwide associates, locations, and it’s future direction. To create a look and feel of Tupperware, all the exhibit walls are curved and the media blended into the environment. Curved media walls, spherical projections, and large interactive displays provide cutting edge engagement for visitors.</p>
+                                                    <p>Tupperware had two criteria for the project content: feature everything in four languages and have the ability to update it remotely.</p>
+                                                    <p>By displaying all the content digitally, we are able to have the visitor select their language and display graphically or apply the selected language as narrative. The remote content management system allows changes for special events and future growth which ensures the space is always up to date.</p>
+                                                    <p>Included are a variety of interactive components around the center. Guests can travel the globe on the large four-display interactive map wall, explore prominent bios across Tupperware Brands, test their Tupperware knowledge on one of several quiz stations, view many of the awards the Tupperware Brands have received and even take a photograph of themselves in front of various digital backgrounds which can be changed from a control panel on the wall next to them. They can even send the digital photograph to themselves to show off to their friends later!</p>
+                                                    <p>All of the interactive components around the center are content managed and can be updated via a password protected admin website.</p>
+                                                    <p>In addition to the interactives, a custom seven screen experience timed to props that light up at specified sections of the video is prominently displayed and surrounded by real world Tupperware examples. Using modern editing techniques, motion graphics, 4k Video production and collaboration with the programmers, a very dynamic experience was established.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="collapsible-header"><i class="material-icons">label_outline</i>Experience Overview</div>
+                                                <div class="collapsible-body">
+                                                    <p>Most of the interactives at The Tupperware Brands Confidence Center use a touchscreen interface. Some examples of the features and hardware are:</p>
+                                                    <ul class="squares">
+                                                        <li>Large format displays with touchscreen overlays</li>
+                                                        <li>Large format heritage displays</li>
+                                                        <li>An extra large multiuser wall interactive formed by four large format displays with touch screen overlays</li>
+                                                        <li>Individual user touchscreen quiz stations</li>
+                                                        <li>A ceiling mounted spherical projection</li>
+                                                        <li>A video experience across seven large format displays</li>
+                                                        <li>Rear projection digital scenery wall</li>
+                                                        <li>Small format touchscreen control panel</li>
+                                                        <li>Programmatically triggered digital camera and flash</li>
+                                                        <li>Email take home option of digital photos on demand</li>
+                                                        <li>Remote content management via a browser based admin website</li>
+                                                    </ul>
+                                                    <p>Tupperware Brands has been extremely happy with the results and continues to offer the public access to their heritage through this engaging experience.</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                        <p><a href="pdf/Tupperware-casestudy.pdf" class="waves-effect waves-light btn blue darken-4" target="_blank"><i class="material-icons right">cloud</i>Download Case Study</a></p>
+                                        <div class="video-container z-depth-1">
+                                            <iframe src="https://player.vimeo.com/video/172642893?title=0&byline=0&portrait=0" width="853" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware2.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware2.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware3.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware3.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware4.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware4.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware5.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware5.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware6.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware6.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware7.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware7.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware8.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware8.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware9.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware9.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware10.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware10.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware11.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware11.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware12.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware12.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware13.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware13.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware14.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware14.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware15.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware15.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware16.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware16.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware17.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware17.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-tupperware18.jpg" class="strip" data-strip-group="project-tupperware"><img src="img/projects-thumb-tupperware18.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="divider"></div>
+                                        <h5>South Texas Heritage Center<br><small>The Witte Museum<br>3801 Broadway St, San Antonio, TX 78209</small></h5>
+                                        <p>The Witte Museum, San Antonio&rsquo;s premiere museum of South Texas history, culture, and natural science desired a large scale, interactive table as the centerpiece for the museum&rsquo;s new South Texas Heritage Center.
+                                        </p>
+
+                                        <ul class="collapsible" data-collapsible="accordion">
+                                            <li>
+                                                <div class="collapsible-header"><i class="material-icons">label_outline</i>Project Details</div>
+                                                <div class="collapsible-body">
+                                                    <p>An interactive installation at the Witte Museum, San Antonio's premiere museum of South Texas history, culture, and natural science. The centerpiece features a map of all the oil wells in Texas plus historic photos and videos about the search for oil.</p>
+                                                    <p>The 60 inch multi-touch screen table utilizes a custom air application to launch a 27,188 x 20,951 pixel interactive map. Users have the ability to navigate through an aerial survey of 5 counties, showing property lines and corresponding natural gas and oil wells. Users begin their journey with a bird&rsquo;s eye view of the San Antonio area, and have the ability to drill down to individual properties.</p>
+                                                    <p>Additional interactives include a photo gallery utilizing historical images to journey back to the hey day of South Texas oil drilling, cattle driving and life in circa 1800 San Antonio. Multiple users are able to interact with the images in concert, and photos can be enlarged, rotated and thrown across the table.</p>
+                                                    <p>The photo gallery is managed by a simple content management system which allows the museum to add or delete photos from a password protected admin website.</p>
+                                                    <p>Upon exiting the exhibit, visitors can contribute their own &quot;South Texas Story&quot;. The kiosk encourages visitors to share tales of their family&rsquo;s livelihood, or information about their life, family, culture or traditions.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="collapsible-header"><i class="material-icons">label_outline</i>Experience Overview</div>
+                                                <div class="collapsible-body">
+                                                    <p>All of the interactives at The South Texas Heritage Center utilize a touchscreen interface. Some examples of the features and hardware are:</p>
+                                                    <ul class="squares">
+                                                        <li>Several large format multitouch displays</li>
+                                                        <li>Digital photo viewing and &quot;tossing&quot;</li>
+                                                        <li>Data collection via a touchscreen exit kiosk</li>
+                                                        <li>Remote content management via a browser based admin website</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="video-container">
+                                            <iframe src="https://player.vimeo.com/video/173109265?title=0&byline=0&portrait=0" width="853" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                        </div>
+                                        <div class="row">
+                                            <!-- TODO: Texas photos -->
+                                        </div>
+
+                                        <div class="divider"></div>
+                                        <h5>3M Innovation Center<br><small>St. Paul, Minnesota</small></h5>
+                                        <p>In order to help customers gain an understanding of the amazing 3M technologies, a new 3M Innovation Center was constructed in St. Paul Minnesota.</p>
+                                        <p>Guests are greeted by a dark room and an overhead dome presentation. As the presentation is concluding, color coded light towers illuminate and flash then dim and the main lighting comes on. As the guests leave the domes area they walk towards several marble covered large format touch screen interactives where they can learn more about what technology is on display in the room. As they make color coded choices, the corresponding light towers illuminate next to the technology display location. Around the perimeter of the vast room are additional touch screen interatives highlighting various 3M technologies. I was responsible for the development and installation of the interactives.</p>
+                                        <p>Building construction was ongoing during the interactives installation, so I have included a walk through video below from GOCO, the company we worked with on this project. I&rsquo;ve even included a picture of me with my hardhat on.</p>
+                                        <div class="video-container z-depth-1">
+                                            <iframe src="https://player.vimeo.com/video/153911977?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen="" mozallowfullscree="" allowfullscreen=""></iframe>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-3m.jpg" class="strip" data-strip-group="project-3m"><img src="img/projects-thumb-3m.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-3m2.jpg" class="strip" data-strip-group="project-3m"><img src="img/projects-thumb-3m2.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-3m3.jpg" class="strip" data-strip-group="project-3m"><img src="img/projects-thumb-3m3.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-3m4.jpg" class="strip" data-strip-group="project-3m"><img src="img/projects-thumb-3m4.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-3m5.jpg" class="strip" data-strip-group="project-3m"><img src="img/projects-thumb-3m5.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-3m6.jpg" class="strip" data-strip-group="project-3m"><img src="img/projects-thumb-3m6.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-3m7.jpg" class="strip" data-strip-group="project-3m"><img src="img/projects-thumb-3m7.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-3m8.jpg" class="strip" data-strip-group="project-3m"><img src="img/projects-thumb-3m8.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-3m9.jpg" class="strip" data-strip-group="project-3m"><img src="img/projects-thumb-3m9.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-3m10.jpg" class="strip" data-strip-group="project-3m"><img src="img/projects-thumb-3m10.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-3m11.jpg" class="strip" data-strip-group="project-3m"><img src="img/projects-thumb-3m11.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-3m12.jpg" class="strip" data-strip-group="project-3m"><img src="img/projects-thumb-3m12.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s12">
+                                                <p class="center-align"><a href="img/projects-3m13.jpg" class="strip" data-strip-group="project-3m"><img src="img/projects-thumb-3m13.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="divider"></div>
+                                        <h5>Motorola Spressions</h5>
+                                        <p>Motorola wanted to provide tattoos and etching for several of their popular phones at the store in their Chicago office. Customers could choose from a variety of designs and print their custom tattoo or laser etch their phone while in the store. Additionally customers could download screen savers, wallpapers, etc. to their phones.</p>
+                                        <div class="row">
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-moto.jpg" class="strip" data-strip-group="project-moto"><img src="img/projects-thumb-moto.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-moto2.jpg" class="strip" data-strip-group="project-moto"><img src="img/projects-thumb-moto2.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-moto3.jpg" class="strip" data-strip-group="project-moto"><img src="img/projects-thumb-moto3.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-moto4.jpg" class="strip" data-strip-group="project-moto"><img src="img/projects-thumb-moto4.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-moto5.jpg" class="strip" data-strip-group="project-moto"><img src="img/projects-thumb-moto5.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-moto6.jpg" class="strip" data-strip-group="project-moto"><img src="img/projects-thumb-moto6.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-moto7.jpg" class="strip" data-strip-group="project-moto"><img src="img/projects-thumb-moto7.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-moto8.jpg" class="strip" data-strip-group="project-moto"><img src="img/projects-thumb-moto8.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-moto9.jpg" class="strip" data-strip-group="project-moto"><img src="img/projects-thumb-moto9.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-moto10.jpg" class="strip" data-strip-group="project-moto"><img src="img/projects-thumb-moto10.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-moto11.jpg" class="strip" data-strip-group="project-moto"><img src="img/projects-thumb-moto11.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <p><a href="img/projects-moto12.jpg" class="strip" data-strip-group="project-moto"><img src="img/projects-thumb-moto12.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="divider"></div>
+                                        <h5>Bose</h5>
+                                        <p>Bose was developing a sound system for the Ferrari Scaglietti and they needed a way to prototype the user interface. Using Flash and a custom USB input device from Bose I created a simulation of the various sections that would be available on the final unit. The head unit was to have a proximity sensor that allowed the screen to adapt as the driver reached for the controls. I really enjoyed this project.</p>
+                                        <div class="row">
+                                            <div class="col s6 m3">
+                                                <p><a href="img/projects-bose.jpg" class="strip" data-strip-group="project-bose"><img src="img/projects-thumb-bose.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m3">
+                                                <p><a href="img/projects-bose2.jpg" class="strip" data-strip-group="project-bose"><img src="img/projects-thumb-bose2.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m3">
+                                                <p><a href="img/projects-bose3.jpg" class="strip" data-strip-group="project-bose"><img src="img/projects-thumb-bose3.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                            <div class="col s6 m3">
+                                                <p><a href="img/projects-bose4.jpg" class="strip" data-strip-group="project-bose"><img src="img/projects-thumb-bose4.jpg" class="responsive-img z-depth-1 project-thumb" alt=""></a></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="divider"></div>
+                                        <h6>Other Clients Include</h6>
+                                        <ul>
+                                            <li>Georgia Aquarium</li>
+                                            <li>Wendy's</li>
+                                            <li>Harmonic</li>
+                                            <li>RiteAid</li>
+                                            <li>Sonny&rsquo;s BBQ</li>
+                                            <li>Yahoo</li>
+                                            <li>EA Sports</li>
+                                            <li>Burger King</li>
+                                            <li>KOHL&rsquo;s</li>
+                                            <li>Buffalo Wild Wings</li>
+                                            <li>Cooper Tires</li>
+                                            <li>Stetson University</li>
+                                            <li>PalmerHouse Hotel</li>
+                                            <li>Zentila</li>
+                                            <li><p>&#8230;and many more.</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="stars"></div>
+    <div class="vine-landscape-gradient"></div>
+    <div class="big-planet"></div>
+    <div class="future-sign"></div>
+    <div class="future-sign-small"></div>
+
+    <img src="img/vine-landscape.png" class="vine-landscape">
+</section>
+<!-- TODO: Make a game or something here and tell mobile that they should play on their desktop since their phone is the app -->
+<section class="game scrollspy initiallyHidden" id="game">
+    <div class="container">
+        <div class="row">
+            <div class="col m12 l11">
+                <h1><span class="lg">T</span> here&rsquo;s an App For This Website</h1>
+                <div class="divider"></div>
+                <p class="flow-text" style="padding-bottom: 300px;">Check back for progress on the app, which is under development.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="page-footer initiallyHidden">
+    <div class="container">
+        <div class="row">
+            <div class="col l7 s12 red darken-4">
+                <h4>How Can I Help You?</h4>
+                <p>If I can help you with something you are working on or with an idea you may have, <a class="open-contact hand">let me know</a>. Some examples might be:</p>
+                <ul class="squares">
+                    <li>A cool touch screen endeavour, museum or otherwise</li>
+                    <li>Help debugging or you can&rsquo;t get something to work</li>
+                    <li>General help with an existing website</li>
+                    <li>You need digital signage</li>
+                    <li>A standalone kiosk</li>
+                    <li>Online or mobile application</li>
+                    <li>You need a website</li>
+                    <li>Something else interesting and fun</li>
+                </ul>
+                <p>Really you can contact me for most any web technology based work and if I can help I&rsquo;ll let you know, if I can&rsquo;t, I&rsquo;ll let you know that as well. Be sure to send along your goals and a rough idea of when you need it by. If you have any examples of existing products, websites, etc. that indicate a design direction or functionality baseline, send those along as well.</p>
+            </div>
+            <div class="col l3 offset-l2 s12">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright brown darken-2">
+        <div class="container">
+            Thanks for your time!
+            <a class="right open-contact hand">Contact Me</a>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.0.0.min.js"><\/script>')</script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/vendor/materialize.min.js"></script><!-- TODO: make a custom materialize file to save some k's -->
+<script src="js/vendor/strip.pkgd.min.js"></script>
+<script src="js/main.js"></script>
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-81151641-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>

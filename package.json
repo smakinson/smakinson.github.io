@@ -1,0 +1,17 @@
+{
+  "name": "smakinson.github.io",
+  "private": true,
+  "version": "1.0.0",
+  "description": "smakinson.github.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/smakinson/smakinson.github.io.git"
+  },
+  "homepage": "https://github.com/smakinson/smakinson.github.io",
+  "author": "Shawn Makinson",
+  "license": "MIT"
+}
