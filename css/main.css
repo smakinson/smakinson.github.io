@@ -260,33 +260,6 @@ section.about .about-text p:last-child {
     height: 100%;
 }
 
-.about-vertical-line1 {
-    position: absolute;
-    top: 172px;
-
-    width: 27px;
-    height: 100px;
-    z-index: 1;
-    display: block;
-    background-color: #000;
-}
-
-.about-vertical-line {
-    position: absolute;
-    /*top: -38px;
-    left: 15px;
-    width: 27px;
-    height: 719px;*/
-
-    top: 4px;
-
-    width: 27px;
-    height: 100%;
-    z-index: 1;
-    display: block;
-    background-color: #000;
-}
-
 .cloud {
     position: absolute;
     /*background: url("../img/cloud-1.svg") 0 0 no-repeat; IE doesn't like this svg, perhaps look into it later. */
