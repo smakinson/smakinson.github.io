@@ -98,7 +98,7 @@
         return Modernizr.mq('(min-width: 601px)');
     }
 
-    var SKIP_INTRO = true; // Ha!! What is this, 1999?
+    var SKIP_INTRO = false; // Ha!! What is this, 1999?
 
     var formOpen = false;
     var contactFormTimeline = new TimelineLite({ paused: true });
@@ -196,7 +196,7 @@
             ease: Strong.easeIn,
             onComplete: function () {
                 var contactFormScrollToId = isSmallWindow() ? '#contactForm': '#contactFormOpenTarget';
-                TweenMax.to(window, .1, { scrollTo: { y: contactFormScrollToId } });
+                TweenMax.to(window, .8, { scrollTo: { y: contactFormScrollToId } });
             }
         }));
         contactFormTimeline.add(TweenLite.to('.contact-box', .3, {
@@ -205,8 +205,13 @@
         }));
         contactFormTimeline.add(TweenLite.fromTo('#contactCloseBtn', .3, { autoAlpha: 0 }, { autoAlpha: 1 }));
 
-        $('.open-contact').mousedown(function () {
-           openContactForm();
+        $('.open-contact').click(function () {
+            openContactForm();
+
+            if(isSmallWindow()) {
+                $('.button-collapse').sideNav('hide');
+            }
+            return false;
         });
 
         $(window).resize(function () {
@@ -263,10 +268,10 @@
         var contactFormScrollToId = isSmallWindow() ? '#contactForm': '#contactFormOpenTarget';
 
         if(isSmallWindow()){
-            TweenMax.to(window, .1, { scrollTo: { y: contactFormScrollToId } });
+            TweenMax.to(window, .8, { scrollTo: { y: contactFormScrollToId } });
         }else{
             if(formOpen) {
-                TweenMax.to(window, .1, { scrollTo: { y: contactFormScrollToId } });
+                TweenMax.to(window, .8, { scrollTo: { y: contactFormScrollToId } });
             }else{
                 formOpen = true;
                 contactFormTimeline.timeScale(1);
