@@ -58,8 +58,8 @@
             TweenMax.to('#site-wrap', .2, { y: '+=10', ease: Quad.easeOut })
         ], '-=0', 'normal', 0.1);
 
-        tl.to('#loadingMsg .three', .3, { opacity: 1, scale: 2, bottom: '5%', ease: Quad.easeOut }, '-=0.2');
-        tl.to('#loadingMsg .three', .3, { scale: 0, bottom: 0, ease: Back.easeIn }, '+=0.3');
+        tl.to('#loadingMsg .three', .3, { opacity: 1, scale: 2, top: '500', ease: Quad.easeOut }, '-=0.2');
+        tl.to('#loadingMsg .three', .3, { scale: 0, top: 0, ease: Back.easeIn }, '+=0.3');
 
         tl.to('#site-wrap', 1, { y: 0, ease: SlowMo.ease.config(0.2, 0.8, false), clearProps: 'y',
         onStart: function () {
@@ -276,3 +276,36 @@
         formOpen = false;
     }
 })(jQuery);
+
+// Avoid `console` errors in browsers that lack a console.
+(function() {
+    var method;
+    var noop = function () {};
+    var methods = [
+        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+        'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'
+    ];
+    var length = methods.length;
+    var console = (window.console = window.console || {});
+
+    while (length--) {
+        method = methods[length];
+
+        // Only stub undefined methods.
+        if (!console[method]) {
+            console[method] = noop;
+        }
+    }
+}());
+
+// Place any jQuery/helper plugins in here.
+$.fn.extend({
+    animateCss: function (animationName) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        $(this).addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+        });
+    }
+});
