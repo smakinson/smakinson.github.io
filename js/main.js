@@ -98,7 +98,7 @@
         return Modernizr.mq('(min-width: 601px)');
     }
 
-    var SKIP_INTRO = false; // Ha!! What is this, 1999?
+    var SKIP_INTRO = true; // Ha!! What is this, 1999?
 
     var formOpen = false;
     var contactFormTimeline = new TimelineLite({ paused: true });
@@ -131,12 +131,15 @@
         var navTween = TweenLite.to('header .navbar-fixed, header nav, header nav li, header .button-collapse i', .1, { paused: true, height: '40px', lineHeight: '38px', ease: Linear.easeIn });
 
         $(window).scroll(function() {
-            var offset = $(window).scrollTop();
+            if(isNotSmallWindow()){
 
-            if(offset > 300){
-                navTween.play();
-            }else{
-                navTween.reverse();
+                var offset = $(window).scrollTop();
+
+                if(offset > 300){
+                    navTween.play();
+                }else{
+                    navTween.reverse();
+                }
             }
         });
 
@@ -146,18 +149,22 @@
 
         $('#top-nav .nav-about').click(function (e) {
             TweenMax.to(window, .8, { scrollTo: { y: 0 }, ease: Linear.easeNone });
+            $('.button-collapse').sideNav('hide');
             return false;
         });
         $('#top-nav .nav-site').click(function () {
             TweenMax.to(window, .8, { scrollTo: { y: sectionSiteOffset }, ease: Linear.easeNone });
+            $('.button-collapse').sideNav('hide');
             return false;
         });
         $('#top-nav .nav-projects').click(function () {
             TweenMax.to(window, .8, { scrollTo: { y: sectionProjectsOffset }, ease: Linear.easeNone });
+            $('.button-collapse').sideNav('hide');
             return false;
         });
         $('#top-nav .nav-game').click(function () {
             TweenMax.to(window, .8, { scrollTo: { y: sectionGameOffset }, ease: Linear.easeNone });
+            $('.button-collapse').sideNav('hide');
             return false;
         });
 
@@ -188,7 +195,8 @@
             boxShadow: '0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)',
             ease: Strong.easeIn,
             onComplete: function () {
-                TweenMax.to(window, .1, { scrollTo: { y: '#contactFormOpenTarget' } });
+                var contactFormScrollToId = isSmallWindow() ? '#contactForm': '#contactFormOpenTarget';
+                TweenMax.to(window, .1, { scrollTo: { y: contactFormScrollToId } });
             }
         }));
         contactFormTimeline.add(TweenLite.to('.contact-box', .3, {
@@ -252,12 +260,18 @@
     }
 
     function openContactForm() {
-        if(formOpen) {
-            TweenMax.to(window, .1, { scrollTo: { y: '#contactFormOpenTarget' } });
+        var contactFormScrollToId = isSmallWindow() ? '#contactForm': '#contactFormOpenTarget';
+
+        if(isSmallWindow()){
+            TweenMax.to(window, .1, { scrollTo: { y: contactFormScrollToId } });
         }else{
-            formOpen = true;
-            contactFormTimeline.timeScale(1);
-            contactFormTimeline.play();
+            if(formOpen) {
+                TweenMax.to(window, .1, { scrollTo: { y: contactFormScrollToId } });
+            }else{
+                formOpen = true;
+                contactFormTimeline.timeScale(1);
+                contactFormTimeline.play();
+            }
         }
     }
 
