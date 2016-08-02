@@ -8,13 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- TODO: Social Media Items -->
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
 
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/vendor/normalize.css">
-    <link rel="stylesheet" href="css/vendor/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <link rel="stylesheet" href="css/vendor/strip.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -60,116 +58,6 @@
                 font-size: 2rem;
                 line-height: 2rem;
             }
-        }
-
-        #loadingMsg img{
-            margin: 0 auto;
-            width: 60%;
-        }
-
-        .loadingMsgAni{
-            animation: loadingCloudAnimationFrames linear 4s;
-            animation-iteration-count: infinite;
-            transform-origin: 50% 50%;
-            -webkit-animation: loadingCloudAnimationFrames linear 4s;
-            -webkit-animation-iteration-count: infinite;
-            -webkit-transform-origin: 50% 50%;
-            -moz-animation: loadingCloudAnimationFrames linear 4s;
-            -moz-animation-iteration-count: infinite;
-            -moz-transform-origin: 50% 50%;
-            -o-animation: loadingCloudAnimationFrames linear 4s;
-            -o-animation-iteration-count: infinite;
-            -o-transform-origin: 50% 50%;
-            -ms-animation: loadingCloudAnimationFrames linear 4s;
-            -ms-animation-iteration-count: infinite;
-            -ms-transform-origin: 50% 50%;
-        }
-
-        @keyframes loadingCloudAnimationFrames {
-            0% {
-                transform: translate(0px, 0px);
-            }
-            16% {
-                transform: translate(0px, -17px);
-            }
-            50% {
-                transform: translate(0px, -53px);
-            }
-            100% {
-                transform: translate(0px, 0px);
-            }
-        }
-
-        @-moz-keyframes loadingCloudAnimationFrames {
-            0% {
-                -moz-transform: translate(0px, 0px);
-            }
-            16% {
-                -moz-transform: translate(0px, -17px);
-            }
-            50% {
-                -moz-transform: translate(0px, -53px);
-            }
-            100% {
-                -moz-transform: translate(0px, 0px);
-            }
-        }
-
-        @-webkit-keyframes loadingCloudAnimationFrames {
-            0% {
-                -webkit-transform: translate(0px, 0px);
-            }
-            16% {
-                -webkit-transform: translate(0px, -17px);
-            }
-            50% {
-                -webkit-transform: translate(0px, -53px);
-            }
-            100% {
-                -webkit-transform: translate(0px, 0px);
-            }
-        }
-
-        @-o-keyframes loadingCloudAnimationFrames {
-            0% {
-                -o-transform: translate(0px, 0px);
-            }
-            16% {
-                -o-transform: translate(0px, -17px);
-            }
-            50% {
-                -o-transform: translate(0px, -53px);
-            }
-            100% {
-                -o-transform: translate(0px, 0px);
-            }
-        }
-
-        @-ms-keyframes loadingCloudAnimationFrames {
-            0% {
-                -ms-transform: translate(0px, 0px);
-            }
-            16% {
-                -ms-transform: translate(0px, -17px);
-            }
-            50% {
-                -ms-transform: translate(0px, -53px);
-            }
-            100% {
-                -ms-transform: translate(0px, 0px);
-            }
-        }
-
-        #loadingMsg > div {
-            height: 100%;
-            position: relative;
-        }
-
-        #loadingMsg > div p {
-            position: absolute;
-            width: 100%;
-            top: 30px;
-            text-align: center;
         }
     </style>
 </head>
@@ -944,9 +832,9 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/TextPlugin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/ScrollToPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 <script src="js/vendor/SplitText.min.js"></script>
 <script src="js/plugins.js"></script>
-<script src="js/vendor/materialize.min.js"></script><!-- TODO: make a custom materialize file to save some k's -->
 <script src="js/vendor/strip.pkgd.min.js"></script>
 <script src="js/main.js"></script>
 
