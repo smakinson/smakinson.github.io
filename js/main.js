@@ -1,3 +1,5 @@
+'use strict';
+
 (function ($) {
     $(function () {
 
@@ -14,13 +16,15 @@
         $('.button-collapse').sideNav();
         $('.modal-trigger').leanModal();
 
-        var tl = new TimelineLite({ onComplete: function () {
+        tl = new TimelineLite({ onComplete: function () {
             // Put the scroll bars back.
             $('html, body').removeClass('noScroll');
 
             initConstantAnimations();
             initContactForm();
             initTopNav();
+
+            tl = null;
         } });
 
         if(SKIP_INTRO) {
@@ -100,6 +104,8 @@
 
     var SKIP_INTRO = false; // Ha!! What is this, 1999?
 
+    var tl; // Intro timeline.
+    var navTween;
     var formOpen = false;
     var contactFormTimeline = new TimelineLite({ paused: true });
     var sectionSiteOffset = 0, sectionProjectsOffset = 0, sectionGameOffset = 0;
@@ -128,14 +134,12 @@
     }
 
     function initTopNav() {
-        var navTween = TweenLite.to('header .navbar-fixed, header nav, header nav li, header .button-collapse i', .1, { paused: true, height: '40px', lineHeight: '38px', ease: Linear.easeIn });
+        navTween = TweenLite.to('header .navbar-fixed, header nav, header nav li, header .button-collapse i', .1, { paused: true, height: '40px', lineHeight: '38px', ease: Linear.easeIn });
 
         $(window).scroll(function() {
             if(isNotSmallWindow()){
 
-                var offset = $(window).scrollTop();
-
-                if(offset > 300){
+                if($(window).scrollTop() > 300){
                     navTween.play();
                 }else{
                     navTween.reverse();
