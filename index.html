@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js noScroll" lang="">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -19,15 +19,47 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <style>
+        .js #site-wrap {
+            opacity: 0;
+            -moz-opacity: 0;
+        }
+
         #loadingMsg {
             position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            width: 100%;
+            height: 100%;
+        }
+
+        #loadingMsg p{
+            position: absolute;
+            bottom: 20%;
+            width: 100%;
+            color: #fff;
             text-transform: uppercase;
             font-weight: bold;
-            font-size: 1.5rem;
-            color: #000;
-            width: 100%;
+            font-size: 5rem;
+            line-height: 5rem;
             text-align: center;
-            top: 20%;
+            padding: 0 1rem;
+        }
+
+        #loadingMsg p.load-text{
+            bottom: 50%;
+        }
+
+        #loadingMsg p.hide-text{
+            opacity: 0;
+            -moz-opacity: 0;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #loadingMsg p{
+                font-size: 2rem;
+                line-height: 2rem;
+            }
         }
 
         #loadingMsg img{
@@ -141,17 +173,24 @@
         }
     </style>
 </head>
-<body>
+<body class="stars noScroll">
 
+<div id="loadingMsg">
+    <p class="load-text">Just a Sec, Almost Ready!</p>
+    <p class="one hide-text">Oooo! Pretty Stars...</p>
+    <p class="two hide-text">Incoming!!</p>
+    <p class="three hide-text">Go Now!!</p>
+</div>
+
+<div id="site-wrap">
 <header>
     <div class="navbar-fixed">
-        <nav class="z-depth-1 grey darken-2" role="navigation">
+        <nav class="z-depth-1 grey darken-2" role="navigation" id="top-nav">
             <div class="nav-wrapper container">
                 <div class="nav-wrapper">
-                    <!-- link to the repo here? -->
                     <a href="#" class="brand-logo right">&nbsp;</a>
-                    <ul id="nav-main" class="left hide-on-small-and-down initiallyHidden">
-                        <li class="nav-about active"><a href="#about" class="">Hello</a></li>
+                    <ul id="nav-main" class="left hide-on-small-and-down">
+                        <li class="nav-about"><a href="#about" class="">Hello</a></li>
                         <li class="nav-site"><a href="#site" class="">About <span class="hide-on-med-and-down">This Site</span></a></li>
                         <li class="nav-projects"><a href="#projects" class="">Work <span class="hide-on-med-and-down">History</span></a></li>
                         <li class="nav-game"><a href="#game" class="">App <span class="hide-on-med-and-down">For This Website!</span></a></li>
@@ -176,16 +215,7 @@
 <![endif]-->
 <p id="jsoffmsg" class="browserupgrade">You have disabled JavaScript, this site will not work as designed.</p>
 
-
-<div id="loadingMsg" class="loadingMsgAni">
-    <div>
-        <img src="img/cloud-2.svg">
-        <p>Incoming!</p>
-    </div>
-</div>
-
-<section class="about scrollspy initiallyHidden" id="about">
-    <div class="intro-planet"></div>
+<section class="about" id="about">
     <div class="mountain"></div>
     <div class="bar">
         <div class="container">
@@ -204,9 +234,8 @@
         </div>
     </div>
 
-    <div class="about-scenery">
+    <div class="about-scenery" id="contactFormOpenTarget">
         <div class="me-pic"></div>
-
         <div class="cloud cloud1"></div>
         <div class="cloud-rev cloud2"></div>
         <div class="cloud cloud3"></div>
@@ -220,7 +249,6 @@
 
     <div class="container">
         <div class="row">
-
             <div class="col s12 m8 push-m4">
                 <div class="about-text">
                     <h4>Something Personal</h4>
@@ -228,7 +256,7 @@
                     <h4>Something Professional</h4>
                     <p class="flow-text">Having been at this stuff for a long time now, I attended the first Flash Forward in 2000 and I have battled Netscape 4. Through the years many things have changed and some things have stayed the same. What was for the web is now for almost everything. HTML, CSS, JavaScript to build websites, apps, IoT, digital signage, games, the list goes on&#8230; </p>
                     <p class="flow-text">I have used Flash for banners, games, online apps that act like HTML, hardware simulations, experiential museum installs and retail kiosks ( as Air ). HTML, CSS and JavaScript for your website, kiosk or app. Content management done in XML, JSON, ASP, PHP, Ruby, Python, JavaScript, the &quot;Cloud&quot;.</p>
-                    <p class="flow-text" id="navShrinkTarget">The technology is not the determinant, the project goal and its best solution are. Today there are so many options that we can pick and choose, adapt and read the documentation as needed.</p>
+                    <p class="flow-text" id="navShrinkTarget">The technology is not the determinant, the project goal and its best solution are. Today there are so many options that we can pick and choose, adapt and read the documentation as needed. Think hammer or screwdriver for that nail.</p>
                 </div>
             </div>
 
@@ -313,7 +341,7 @@
         </div>
     </div>
 </section>
-<section class="site scrollspy initiallyHidden" id="site">
+<section class="site" id="site">
     <div class="bg">
         <div class="ripples">
             <div class="water-scenery">
@@ -328,7 +356,8 @@
                             <h1><span class="lg">T</span> his Website</h1>
                             <div class="divider"></div>
                             <p class="flow-text">As you can tell by the casual design, this is my personal website. I was going for an interesting combination of illustrations with some photograph imagery mixed in. The result is a single page website with each section continuing to a neighboring world of some sorts, it&rsquo;s almost like they are all connected through some means. I am a Zelda fan, so I may have been drawn somewhat towards a Wind Waker style as it came together. The goal was to build something that is responsive but not so common place and grid-like in the way it feels, and still take advantage of a responsive framework.</p>
-                            <p class="flow-text">The website has a fair amount of content, but hopefully not so much that it is overwhelming. I wanted to include a bit of animation, but I resisted taking it too far and have included only some subtle movement. Remember <a href="https://www.youtube.com/watch?v=9Y-ESJS911c" target="_blank">Gabocorp</a>? Scroll down and check out the projects below. I tried to include a bit of a variety, as well as some that were the most rewarding. If you enjoy the site and want to let me know you can <a class="open-contact hand">contact me using the form above</a>.</p>
+                            <p class="flow-text">The website has a fair amount of content, but hopefully not so much that it is overwhelming. I wanted to include a bit of animation, but I resisted taking it too far and have included only some subtle movement. That intro animation doesn&rsquo;t count! It&rsquo;s a fun throwback to the last time animation was getting so much attention around the web. Remember <a href="https://www.youtube.com/watch?v=9Y-ESJS911c" target="_blank">Gabocorp</a>? It&rsquo;s unlikely this would be appropriate outside a personal website.</p>
+                            <p class="flow-text">Scroll down and check out the projects below. I tried to include a bit of a variety, as well as some that were the most rewarding. If you enjoy the site and want to let me know you can <a class="open-contact hand">contact me using the form above</a>.</p>
                         </div>
                     </div>
                 </div>
@@ -336,7 +365,7 @@
         </div>
     </div>
 </section>
-<section class="projects scrollspy initiallyHidden" id="projects">
+<section class="projects" id="projects">
     <div class="vine-repeat">
         <div class="vine-top">
             <div class="container">
@@ -579,7 +608,7 @@
 
                                         <ul class="collapsible" data-collapsible="accordion">
                                             <li>
-                                                <div class="collapsible-header active"><i class="material-icons">label_outline</i>Project Details</div>
+                                                <div class="collapsible-header"><i class="material-icons">label_outline</i>Project Details</div>
                                                 <div class="collapsible-body">
                                                     <p>The Tupperware Brands Confidence Center creatively combines historical narrative and visual storytelling through films and interactive media as well as changeable product displays.</p>
                                                     <p>Multi-media screens and interactive touchscreen kiosks allow visitors to explore information on the company history, new products, worldwide associates, locations, and it’s future direction. To create a look and feel of Tupperware, all the exhibit walls are curved and the media blended into the environment. Curved media walls, spherical projections, and large interactive displays provide cutting edge engagement for visitors.</p>
@@ -681,7 +710,7 @@
 
                                         <ul class="collapsible" data-collapsible="accordion">
                                             <li>
-                                                <div class="collapsible-header active"><i class="material-icons">label_outline</i>Project Details</div>
+                                                <div class="collapsible-header"><i class="material-icons">label_outline</i>Project Details</div>
                                                 <div class="collapsible-body">
                                                     <p>An interactive installation at the Witte Museum, San Antonio's premiere museum of South Texas history, culture, and natural science. The centerpiece features a map of all the oil wells in Texas plus historic photos and videos about the search for oil.</p>
                                                     <p>The 60 inch multi-touch screen table utilizes a custom air application to launch a 27,188 x 20,951 pixel interactive map. Users have the ability to navigate through an aerial survey of 5 counties, showing property lines and corresponding natural gas and oil wells. Users begin their journey with a bird&rsquo;s eye view of the San Antonio area, and have the ability to drill down to individual properties.</p>
@@ -866,7 +895,7 @@
     <img src="img/vine-landscape.png" class="vine-landscape">
 </section>
 <!-- TODO: Make a game or something here and tell mobile that they should play on their desktop since their phone is the app -->
-<section class="game scrollspy initiallyHidden" id="game">
+<section class="game" id="game">
     <div class="container">
         <div class="row">
             <div class="col m12 l11">
@@ -877,7 +906,8 @@
         </div>
     </div>
 </section>
-<footer class="page-footer initiallyHidden">
+
+<footer class="page-footer">
     <div class="container">
         <div class="row">
             <div class="col l7 s12 red darken-4">
@@ -907,18 +937,18 @@
         </div>
     </div>
 </footer>
-
+</div>
 
 <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.0.0.min.js"><\/script>')</script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/TextPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/ScrollToPlugin.min.js"></script>
+<script src="js/vendor/SplitText.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/vendor/materialize.min.js"></script><!-- TODO: make a custom materialize file to save some k's -->
 <script src="js/vendor/strip.pkgd.min.js"></script>
 <script src="js/main.js"></script>
-
 
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
