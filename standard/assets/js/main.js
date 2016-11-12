@@ -135,8 +135,7 @@
 
 			if(name.length > 0 && email.length > 0 && question.length > 0) {
 
-				$('#formWait').show();
-				$('#formSubmit').hide();
+				$('#contactForm .actions input').hide();
 
 				$.ajax({
 					url: $('#contactForm').attr('action'),
@@ -156,6 +155,7 @@
 			var f = $('#contactForm');
 
 			$('#formMsg').fadeIn();
+			$('#contactForm .actions input').show();
 
 			if(f.length > 0){
 				f[0].reset();
